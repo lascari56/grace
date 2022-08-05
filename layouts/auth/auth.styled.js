@@ -3,43 +3,74 @@ import styled from "styled-components"
 import { responsiveSize } from "@utils/responsive";
 
 export const Container = styled.div`
-  min-height: 100vh;
-  min-width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 100vh;
 
-  background-color: #F2F7FF;
+  display: flex;
+`
+
+export const Preview = styled.div`
+  background-color: #6424FB;
+  width: ${responsiveSize(588)};
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 
 export const Content = styled.div`
-  position: relative;
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: center;
-  max-width: ${responsiveSize(432)};
-  width: 100%;
-  padding: ${responsiveSize(36)} ${responsiveSize(25)} ${responsiveSize(20)};
+  justify-content: center;
 
-  background-color: #fff;
-  border-radius: ${responsiveSize(5)};
+  background-color: #F5F5F5;
 `
 
-export const Children = styled.div`
-  width: 100%;
+export const Header = styled.div`
+  
 `
 
-export const Logo = styled.img`
-  width: ${responsiveSize(89)};
-  height: ${responsiveSize(24)};
-  margin-bottom: ${responsiveSize(12)};
+export const Title = styled.p`
+  text-align: left;
+
+  font-weight: 700;
+  font-size: ${responsiveSize(36)};
+  line-height: ${responsiveSize(44)};
+
+  color: #000000;
 `
 
-export const Title = styled.h1`
-  margin-bottom: ${responsiveSize(34)};
+export const Description = styled.p`
+  font-size: ${responsiveSize(16)};
+  line-height: ${responsiveSize(19)};
 
-  font-weight: 500;
-  font-size: ${responsiveSize(24)};
-  line-height: ${responsiveSize(28)};
-  letter-spacing: 0.02em;
+  color: #000000;
+`
+
+export const Social = styled.div`
+  margin-top: ${responsiveSize(26)};
+
+  display: flex;
+`
+
+export const Item = styled.div`
+  padding: ${responsiveSize(8)} ${responsiveSize(21)};
+  background-color: #FFFFFF;
+  border-radius: ${responsiveSize(10)};
+
+  display: flex;
+  align-items: center;
+
+  :not(:last-child){margin-right:${responsiveSize(16)}}
+`
+
+export const Sing = styled.span`
+  margin-left: ${responsiveSize(16)};
+
+  font-size: ${responsiveSize(12)};
+  line-height: ${responsiveSize(15)};
+
+  color: #000000;
 `

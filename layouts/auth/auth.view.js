@@ -1,18 +1,42 @@
 import React from 'react';
 
+import LogoSVG from './images/logo'
+import GoogleSVG from './images/google'
+import FacebookSVG from './images/facebook'
+
 import * as S from "./auth.styled"
 
-const AuthView = ({children, title}) => {
+const AuthView = ({children, title, description}) => {
   return (
     <S.Container>
+      <S.Preview>
+          <LogoSVG/>
+      </S.Preview>
+
       <S.Content>
-        <S.Logo src="/images/logo.svg" />
+        <S.Header>
+            <S.Title>{title}</S.Title>
 
-        <S.Title>{title}</S.Title>
+            <S.Description>{description}</S.Description>
+        
 
-        <S.Children>
+          <S.Social>
+            <S.Item>
+              <GoogleSVG/>
+
+              <S.Sing>Sign in with Google</S.Sing>
+            </S.Item>
+
+            <S.Item>
+              <FacebookSVG/>
+
+              <S.Sing>Sign in with Facebook</S.Sing>
+            </S.Item>
+          </S.Social>
+          </S.Header>
+
           {children}
-        </S.Children>
+
       </S.Content>
     </S.Container>
   );
