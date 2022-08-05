@@ -8,13 +8,14 @@ import { responsiveSize } from "@utils/responsive";
 
 export const Container = styled.div`
   margin-bottom: ${responsiveSize(27)};
-  padding: ${responsiveSize(30)} ${responsiveSize(40)} ${responsiveSize(42)} ${responsiveSize(40)};
+  padding: ${responsiveSize(30)} 0px ${responsiveSize(42)} 0px;
 
   background: #FFFFFF;
   border-radius: ${responsiveSize(20)};
 `
 
 export const Header = styled.div`
+  padding: 0px ${responsiveSize(40)};
   margin-bottom: ${responsiveSize(31)};
 
   display: flex;
@@ -46,12 +47,14 @@ export const Item = styled(RecordingsItem)`
 `
 
 export const Content = styled.div`
+  padding: 0px ${responsiveSize(40)};
+
   max-height: ${responsiveSize(435)};
   overflow-y: auto;
 `
 
 export const Footer = styled.div`
-  padding-top: ${responsiveSize(34)};
+  padding: ${responsiveSize(34)} ${responsiveSize(40)} 0px;
 
   display: flex;
   align-items: center;

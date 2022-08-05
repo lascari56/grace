@@ -6,7 +6,7 @@ import CabinetLayouts from "../layouts/cabinet"
 
 function DashboardScreen(props) {
   return (
-    <Dashboard {...props} />
+    <Dashboard  {...props} />
   );
 }
 

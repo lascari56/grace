@@ -11,19 +11,23 @@ import * as S from './cabinet-menu.styled'
 const items = [
   {
     title:'Dashboard',
-    icon: <Dashboard/>
+    icon: <Dashboard/>,
+    href: '/dashboard'
   },
   {
     title:'Users',
-    icon: <UsersSVG/>
+    icon: <UsersSVG/>,
+    href: '/users'
   },
   {
     title:'All recordings',
-    icon: <RecordingsSVG/>
+    icon: <RecordingsSVG/>,
+    href: '/recordings'
   },
   {
     title:'Settings',
-    icon: <SettingsSVG/>
+    icon: <SettingsSVG/>,
+    href: '/settings'
   },
 ]
 
