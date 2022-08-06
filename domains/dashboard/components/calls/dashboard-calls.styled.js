@@ -13,10 +13,9 @@ export const Container = styled.div`
 
 export const Content = styled.div`
  overflow-y: auto;
+ margin-top: ${responsiveSize(16)};
  
  ::-webkit-scrollbar{
   display: none;
  }
 `
-
-// ${responsiveSize(588)}

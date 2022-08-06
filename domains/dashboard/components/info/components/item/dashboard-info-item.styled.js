@@ -9,8 +9,6 @@ export const Container = styled.div`
 
   background-color: #FFFFFF;
   border-radius: ${responsiveSize(20)};
-
-  width: ${responsiveSize(480)};
 `
 
 

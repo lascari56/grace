@@ -15,7 +15,7 @@ export const Container = styled.div`
 
 export const Header = styled.div`
   padding: 0px ${responsiveSize(40)};
-  margin-bottom: ${responsiveSize(31)};
+  margin-bottom: ${responsiveSize(30)};
 
   display: flex;
   justify-content: space-between;

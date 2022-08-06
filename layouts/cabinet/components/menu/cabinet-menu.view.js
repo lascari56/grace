@@ -31,14 +31,14 @@ const items = [
   },
 ]
 
-export default function CabinetMenuView() {
+export default function CabinetMenuView({ activeRoute }) {
   return (
     <S.Container>
       <LogoSVG/>
 
       <S.Content>
         {items.map((item, index) => (
-          <S.Item key={index} data={item}/>
+          <S.Item data={item} active={item.href === activeRoute} key={index} />
         ))}
       </S.Content>
 
