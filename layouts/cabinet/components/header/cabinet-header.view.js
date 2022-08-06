@@ -2,6 +2,8 @@ import React from 'react'
 
 import * as S from './cabinet-header.styled'
 
+import Link from "next/link"
+
 export default function CabinetHeaderView({title,children}) {
   return (
     <S.Container>
@@ -18,9 +20,11 @@ export default function CabinetHeaderView({title,children}) {
 
         <S.Notification/>
 
-        <S.Avatar>
-          <S.AvatarIcon src='/images/avatar.jpg'/>
-        </S.Avatar>
+        <Link href="/settings">
+          <S.Avatar>
+            <S.AvatarIcon src='/images/avatar.jpg'/>
+          </S.Avatar>
+        </Link>
       </S.Content>
     </S.Container>
   )

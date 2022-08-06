@@ -11,8 +11,7 @@ export const Avatar = styled.img`
   width: ${responsiveSize(100)};
   height: ${responsiveSize(100)};
 
+  margin-bottom: ${responsiveSize(12)};
+
   border-radius: 50%;
 `
-
-
-// ${responsiveSize(30)}

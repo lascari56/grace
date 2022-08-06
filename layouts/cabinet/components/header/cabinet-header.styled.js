@@ -34,10 +34,17 @@ export const Search = styled.div`
 `
 
 export const Input = styled.input`
+  font-size: ${responsiveSize(14)};
+  line-height: ${responsiveSize(17)};
+
   padding: ${responsiveSize(9)} ${responsiveSize(15)};
 
   background: #FFFFFF;
   border-radius: ${responsiveSize(10)};
+
+  ::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+  }
 `
 
 export const SearchIcon = styled(SearchSVG)`
@@ -53,11 +60,13 @@ export const Notification = styled(NotificationSVG)`
 
 export const Avatar =styled.div`
   margin-left: ${responsiveSize(30)};
+
+  cursor: pointer;
 `
 
 export const AvatarIcon = styled.img`
   border-radius: 50%;
 
-  width: 30px;
-  height: 30px;
+  width: ${responsiveSize(30)};
+  height: ${responsiveSize(30)};
 `
