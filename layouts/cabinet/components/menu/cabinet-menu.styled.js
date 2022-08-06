@@ -25,3 +25,22 @@ export const Item = styled(CabinetMenuItem)`
  
 `
 
+export const Footer = styled.div`
+  margin-top: auto;
+
+  display: flex;
+  flex-direction: column;
+`
+
+
+export const Title = styled.span`
+  font-weight: 400;
+  font-size: ${responsiveSize(14)};
+  line-height: ${responsiveSize(17)};
+
+  color: #FFFFFF;
+
+  :last-child{
+    margin-top: ${responsiveSize(20)};
+  }
+`

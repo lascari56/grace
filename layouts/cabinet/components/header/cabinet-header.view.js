@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { Search } from '@components'
+
 import * as S from './cabinet-header.styled'
 
 import Link from "next/link"
@@ -12,11 +14,7 @@ export default function CabinetHeaderView({title,children}) {
 
       <S.Content>
 
-        <S.Search>
-          <S.Input placeholder='Search...'/>
-
-          <S.SearchIcon/>
-        </S.Search>
+        <Search/>
 
         <S.Notification/>
 

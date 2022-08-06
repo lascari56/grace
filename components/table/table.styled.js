@@ -1,5 +1,7 @@
 import styled from "styled-components"
 
+import TablePagination from './components/pagination'
+
 import { responsiveSize } from "@utils/responsive";
 
 export const Container = styled.div`
@@ -8,6 +10,9 @@ export const Container = styled.div`
 
   background: #FFFFFF;
   border-radius: ${responsiveSize(20)};
+
+  display: flex;
+  flex-direction: column;
 `
 
 export const Table = styled.table`
@@ -51,6 +56,11 @@ export const Table = styled.table`
   }
     }
 
+`
+
+export const Pagination = styled(TablePagination)`
+  margin-left: auto;
+  margin-top: ${responsiveSize(34)};
 `
 
 

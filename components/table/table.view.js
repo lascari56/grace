@@ -83,6 +83,8 @@ export default function TableView() {
           </tr>
 
         </S.Table>
+
+        <S.Pagination/>
     </S.Container>
   )
 }
