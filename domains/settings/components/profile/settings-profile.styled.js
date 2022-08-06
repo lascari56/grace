@@ -7,8 +7,6 @@ export const Container = styled.div`
 
   background-color: #FFFFFF;
   border-radius: ${responsiveSize(20)};
-
-  width: 548px;
 `
 export const Title = styled.p`
   font-weight: 700;
@@ -23,5 +21,3 @@ export const Content = styled.div`
 
   display: flex;
 `
-
-// ${responsiveSize(30)}

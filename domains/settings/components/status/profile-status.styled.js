@@ -12,8 +12,7 @@ export const Container = styled.div`
   background-color: #FFFFFF;
   border-radius: ${responsiveSize(20)};
 
-  width: 100%;
-
+  /* width: 100%; */
 `
 
 export const Header = styled.div`
@@ -38,5 +37,3 @@ export const Button = styled(ButtonCustom)`
 export const Item = styled(ProfileStatusItem)`
   margin-bottom: ${responsiveSize(20)};
 `
-
-// ${responsiveSize(30)}

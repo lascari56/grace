@@ -13,19 +13,27 @@ export default function SettingsView() {
   return (
     <CabinetLayouts title='Settings'>
       <S.Container>
-        <S.Column>
-          <SettingsProfile/>
+        <S.Row>
+          <S.Column>
+            <SettingsProfile/>
+          </S.Column>
 
-          <SettingsStats/>
-        </S.Column>
+          <S.Column>
+            <SettingsRecording/>
+          </S.Column>
+        </S.Row>
 
-        <S.Column>
-          <SettingsRecording/>
+        <S.Row>
+          <S.Column>
+            <SettingsStats/>
+          </S.Column>
 
-          <SettingStatus/>
+          <S.Column>
+            <SettingStatus/>
 
-          <SettingsDelete/>
-        </S.Column>
+            <SettingsDelete/>
+          </S.Column>
+        </S.Row>
       </S.Container>
     </CabinetLayouts>
   )

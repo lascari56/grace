@@ -7,8 +7,7 @@ import { Button as ButtonCustom } from '@components'
 import { responsiveSize } from "@utils/responsive";
 
 export const Container = styled.div`
-  margin-bottom: ${responsiveSize(27)};
-  padding: ${responsiveSize(30)} 0px ${responsiveSize(42)} 0px;
+  padding: ${responsiveSize(30)} 0px ${responsiveSize(40)} 0px;
 
   background: #FFFFFF;
   border-radius: ${responsiveSize(20)};
@@ -24,7 +23,7 @@ export const Header = styled.div`
 `
 
 export const Title = styled.p`
-font-weight: 700;
+  font-weight: 700;
   font-size: ${responsiveSize(18)};
   line-height: ${responsiveSize(22)};
 
@@ -41,9 +40,7 @@ export const All = styled.span`
 `
 
 export const Item = styled(RecordingsItem)`
-  :not(:last-child){
-    margin-bottom: ${responsiveSize(20)};
-  }
+  margin-bottom: ${responsiveSize(20)};
 `
 
 export const Content = styled.div`
@@ -53,12 +50,12 @@ export const Content = styled.div`
   overflow-y: auto;
 
   ::-webkit-scrollbar{
-  display: none;
- }
+    display: none;
+  }
 `
 
 export const Footer = styled.div`
-  padding: ${responsiveSize(34)} ${responsiveSize(40)} 0px;
+  padding: ${responsiveSize(24)} ${responsiveSize(40)} 0px;
 
   display: flex;
   align-items: center;

@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { responsiveSize } from "@utils/responsive";
 
 export const Container = styled.div`
-  margin-top: ${responsiveSize(27)};
+  min-height: ${responsiveSize(351)};
   padding: ${responsiveSize(30)} ${responsiveSize(27)} ${responsiveSize(15)} ${responsiveSize(40)};
 
   background: #FFFFFF;

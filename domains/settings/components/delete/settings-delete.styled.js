@@ -10,8 +10,6 @@ export const Container = styled.div`
 
   padding: ${responsiveSize(30)} ${responsiveSize(40)};
 
-  margin-top: ${responsiveSize(27)};
-
   background: #FFFFFF;
   border-radius: ${responsiveSize(20)};
 `
@@ -29,4 +27,3 @@ export const Button = styled(ButtonCustom)`
 
   width: ${responsiveSize(254)};
 `
-// ${responsiveSize(30)}

@@ -3,21 +3,24 @@ import styled from "styled-components"
 import { responsiveSize } from "@utils/responsive";
 
 export const Container = styled.div`
+`
+
+export const Row = styled.div`
   display: flex;
+
+  :not(:last-child) {
+    margin-bottom: ${responsiveSize(27)};
+  }
 `
 
 export const Column = styled.div`
-  display: flex;
-  flex-direction: column;
+  :first-child {
+    flex: 1;
 
-  :last-child{  
-    margin-left: ${responsiveSize(40)};
-    flex:1; 
+    margin-right: ${responsiveSize(40)};
   }
 
-  :first-child{
-    flex:1.1;
+  :last-child {
+    flex: 1;
   }
 `
-
-// ${responsiveSize(30)}
