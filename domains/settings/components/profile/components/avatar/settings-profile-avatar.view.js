@@ -9,7 +9,7 @@ export default function SettingsProfileAvatarView({ className }) {
     <S.Container className={className}>
       <S.Avatar src='/images/avatar.jpg'/>
 
-      <Button title='Change' size="small" theme="outline-green"/>
+      <Button title='Change' size="small" theme="grey"/>
     </S.Container>
   )
 }

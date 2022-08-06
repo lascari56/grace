@@ -30,6 +30,10 @@ export const Input = styled.input`
   width: ${responsiveSize(325)};
 
   ${props => props.size === 'small' && `width: ${responsiveSize(150)};`}
+
+  ${props => props.theme === 'violet' && `
+    background-color: rgba(100, 36, 251, 0.05);
+  `}
 `
 
 export const Eye = styled.div`

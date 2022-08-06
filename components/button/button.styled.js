@@ -29,6 +29,12 @@ export const Container = styled.div`
     height:${responsiveSize(40)};
   `}
 
+  ${props => props.theme === 'grey' && `
+      border-color: #858585;
+      background: transparent;
+      color:#858585;
+    `}
+
   ${props => props.theme === 'outline-green' && `
     border-color: #66D055;
     background: transparent;
@@ -46,6 +52,10 @@ export const Title = styled.span`
   line-height: ${responsiveSize(19)};
 
   color: #FFFFFF;
+
+  ${props => props.theme === 'grey' && `
+      color:#858585;
+    `}
 
   ${props => props.theme === 'outline-green' && `
     color: #66D055;
