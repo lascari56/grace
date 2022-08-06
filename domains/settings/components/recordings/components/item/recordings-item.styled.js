@@ -8,6 +8,17 @@ export const Container = styled.div`
   background-color: #FFFFFF;
   box-shadow: 0px ${responsiveSize(8)} ${responsiveSize(12)} rgba(57, 23, 136, 0.15);
   border-radius: ${responsiveSize(8)};
+
+  display: flex;
+  justify-content: space-between;
+`
+
+export const Content = styled.div`
+  :last-child{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `
 
 export const Title = styled.p`
