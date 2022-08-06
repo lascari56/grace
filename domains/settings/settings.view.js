@@ -11,7 +11,7 @@ import * as S from './settings.styled'
 
 export default function SettingsView() {
   return (
-    <CabinetLayouts>
+    <CabinetLayouts title='Settings'>
       <S.Container>
         <S.Column>
           <SettingsProfile/>

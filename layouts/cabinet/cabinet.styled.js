@@ -19,3 +19,11 @@ export const Content = styled.div`
   flex-direction: column;
   flex: 1;
 `
+
+export const Title = styled.p`
+  font-weight: 700;
+  font-size: ${responsiveSize(24)};
+  line-height: ${responsiveSize(29)};
+
+  color: #000000;
+`

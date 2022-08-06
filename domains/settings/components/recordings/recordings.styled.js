@@ -51,6 +51,10 @@ export const Content = styled.div`
 
   max-height: ${responsiveSize(435)};
   overflow-y: auto;
+
+  ::-webkit-scrollbar{
+  display: none;
+ }
 `
 
 export const Footer = styled.div`

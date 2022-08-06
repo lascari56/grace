@@ -10,7 +10,7 @@ export const Container = styled.div`
   background-color: #1D0F40;
 
   width: ${responsiveSize(280)};
-  height: 100%;
+  height: calc(100vh - ${responsiveSize(80)});
   border-radius: ${responsiveSize(30)};
 
   display: flex;

@@ -19,6 +19,13 @@ export const Date = styled.select`
   border: none;
 
   appearance: none;
+
+  ${props => props.theme === 'dark' && `
+    font-weight: 700;
+    font-size: ${responsiveSize(18)};
+    line-height: ${responsiveSize(22)};
+    color: #000000;
+  `}
 `
 
 

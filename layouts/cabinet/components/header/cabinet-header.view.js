@@ -2,10 +2,11 @@ import React from 'react'
 
 import * as S from './cabinet-header.styled'
 
-export default function CabinetHeaderView({title}) {
+export default function CabinetHeaderView({title,children}) {
   return (
     <S.Container>
-      <S.Title>{title}</S.Title>
+
+      {children}
 
       <S.Content>
 

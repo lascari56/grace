@@ -12,7 +12,9 @@ export default function CabinetView({children, title}) {
       <CabinetMenu/>
       
       <S.Content>
-        <CabinetHeader title={title}/>
+        <CabinetHeader>
+          <S.Title>{title}</S.Title>
+        </CabinetHeader>
 
         {children}
 
