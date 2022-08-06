@@ -38,6 +38,8 @@ export const All = styled.span`
   color: #6424FB;
 
   opacity: 0.5;
+
+  cursor: pointer;
 `
 
 export const Item = styled(RecordingsItem)`

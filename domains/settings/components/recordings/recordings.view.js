@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Link from 'next/link'
+
 import UploadSVG from './image/upload'
 
 import * as S from './recordings.styled'
@@ -33,7 +35,9 @@ export default function RecordingsView() {
       <S.Header>
         <S.Title>Recordings</S.Title>
 
-        <S.All>All recordings</S.All>
+        <Link href='/recordings'>
+          <S.All>All recordings</S.All>
+        </Link>
       </S.Header>
 
       <S.Content>
