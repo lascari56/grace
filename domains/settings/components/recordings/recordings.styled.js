@@ -7,10 +7,14 @@ import { Button as ButtonCustom } from '@components'
 import { responsiveSize } from "@utils/responsive";
 
 export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
   padding: ${responsiveSize(30)} 0px ${responsiveSize(40)} 0px;
 
   background: #FFFFFF;
   border-radius: ${responsiveSize(20)};
+
+  overflow: hidden;
 `
 
 export const Header = styled.div`
@@ -47,10 +51,12 @@ export const Item = styled(RecordingsItem)`
 
 export const Content = styled.div`
   padding: 0px ${responsiveSize(40)};
+  height: ${responsiveSize(395)};
 
-  max-height: ${responsiveSize(435)};
-  overflow-y: auto;
+  overflow-y: scroll;
+`
 
+export const List = styled.div`
   ::-webkit-scrollbar{
     display: none;
   }

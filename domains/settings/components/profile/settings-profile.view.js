@@ -4,9 +4,9 @@ import SettingProfileForm from './components/form'
 
 import * as S from './settings-profile.styled'
 
-export default function SettingsProfileView() {
+export default function SettingsProfileView({ className }) {
   return (
-    <S.Container>
+    <S.Container className={className}>
       <S.Title>Profile ID # 91284</S.Title>
 
       <S.Content>

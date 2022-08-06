@@ -22,14 +22,11 @@ export const Content = styled.div`
 `
 
 export const Input = styled.input`
+  width: 100%;
   padding: ${responsiveSize(10)} ${responsiveSize(15)};
 
   background-color: #F5F5F5;
   border-radius: ${responsiveSize(10)};
-
-  width: ${responsiveSize(325)};
-
-  ${props => props.size === 'small' && `width: ${responsiveSize(150)};`}
 
   ${props => props.theme === 'violet' && `
     background-color: rgba(100, 36, 251, 0.05);

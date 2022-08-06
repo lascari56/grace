@@ -11,9 +11,9 @@ const items = [
   }
 ]
 
-export default function SettingsProfileStatusView() {
+export default function SettingsProfileStatusView({ className }) {
   return (
-    <S.Container>
+    <S.Container className={className}>
       <S.Header>
         <S.Title>Status</S.Title>
 

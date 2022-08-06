@@ -1,9 +1,5 @@
 import React from 'react'
 
-import SettingsProfile from './components/profile'
-import SettingsStats from './components/stats'
-import SettingStatus from './components/status'
-import SettingsRecording from './components/recordings'
 import SettingsDelete from './components/delete'
 
 import * as S from './settings.styled'
@@ -13,21 +9,21 @@ export default function SettingsView() {
     <S.Container>
       <S.Row>
         <S.Column>
-          <SettingsProfile/>
+          <S.Profile />
         </S.Column>
 
         <S.Column>
-          <SettingsRecording/>
+          <S.Recording/>
         </S.Column>
       </S.Row>
 
       <S.Row>
         <S.Column>
-          <SettingsStats/>
+          <S.Stats/>
         </S.Column>
 
         <S.Column>
-          <SettingStatus/>
+          <S.Status/>
 
           <SettingsDelete/>
         </S.Column>

@@ -29,9 +29,9 @@ const items = [
   },
 ]
 
-export default function RecordingsView() {
+export default function RecordingsView({ className }) {
   return (
-    <S.Container>
+    <S.Container className={className}>
       <S.Header>
         <S.Title>Recordings</S.Title>
 
@@ -41,18 +41,22 @@ export default function RecordingsView() {
       </S.Header>
 
       <S.Content>
-        {items.map((item, index) => (
-            <S.Item key={index} data={item}/>
-          ))}
-        </S.Content>
+        <S.List>
+          <div>
+            {items.map((item, index) => (
+              <S.Item key={index} data={item}/>
+            ))}
+          </div>
+        </S.List>
+      </S.Content>
 
-        <S.Footer>
-          <UploadSVG/>
+      <S.Footer>
+        <UploadSVG/>
 
-          <S.Date>21.06.2022  / 19:06</S.Date>
+        <S.Date>21.06.2022  / 19:06</S.Date>
 
-          <S.Button title='Save'/>
-        </S.Footer>
+        <S.Button title='Save'/>
+      </S.Footer>
     </S.Container>
   )
 }

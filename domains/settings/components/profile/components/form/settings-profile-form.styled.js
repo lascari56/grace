@@ -11,12 +11,17 @@ export const Container = styled.div`
 
 export const Row = styled.div`
   display: flex;
-  justify-content: space-between;
+
+  :not(:last-child) {
+    margin-bottom: ${responsiveSize(20)};
+  }
 `
 
 export const Input = styled(InputCustom)`
-  :not(:last-child) {
-    margin-bottom: ${responsiveSize(20)};
+  flex: 1;
+
+  :not(:first-child) {
+    margin-left: ${responsiveSize(25)};
   }
 `
 
