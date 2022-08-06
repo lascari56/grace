@@ -12,7 +12,7 @@ const items = [
   {
     title:'Dashboard',
     icon: <Dashboard/>,
-    href: '/dashboard'
+    href: '/'
   },
   {
     title:'Users',

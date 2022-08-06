@@ -10,11 +10,11 @@ export const Container = styled.div`
   border-radius: ${responsiveSize(20)};
 `
 
-export const Table = styled.table`
+export const Table = styled.div`
   width: 100%;
+  display: table;
 
-  border-collapse: collapse;
-  /* border-spacing: 15px; */
+  border-spacing: 0px ${responsiveSize(10)};
 
   td, th{
     :first-child{
@@ -29,10 +29,6 @@ export const Table = styled.table`
     }
   }
 
-  /* td{
-    padding:${responsiveSize(15)} 0px ${responsiveSize(15)} ${responsiveSize(15)};
-  } */
-
   td {
     font-size: ${responsiveSize(14)};
     line-height: ${responsiveSize(42)};
@@ -40,7 +36,6 @@ export const Table = styled.table`
 
   th {
     text-align:left;
-    /* padding:${responsiveSize(15)} 0px ${responsiveSize(15)} ${responsiveSize(15)}; */
 
     background-color: #6424FB;
     font-weight: 700;
@@ -59,3 +54,28 @@ export const Table = styled.table`
     }
   }
 `
+
+// export const Row = styled.div`
+//   display: table-row;
+//   padding: 10px;
+
+//   box-sizing: border-box;
+
+//   :nth-child(2n){
+//     background-color: rgba(100, 36, 251, 0.05);
+//   }
+//   :nth-child(2n-1){
+//     background-color: rgba(100, 36, 251, 0.02);
+//   }
+
+//   /* :not(:last-child) { */
+//     /* margin-bottom: ${responsiveSize(10)}; */
+//   /* } */
+// `
+
+// export const Cell = styled.div`
+//   display: table-cell;
+
+//   font-size: ${responsiveSize(14)};
+//   line-height: ${responsiveSize(42)};
+// `

@@ -18,14 +18,17 @@ export const Preview = styled.div`
   justify-content: center;
 `
 
-export const Content = styled.div`
+export const Body = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+`
 
-  background-color: #F5F5F5;
+export const Content = styled.div`
+  max-width: ${responsiveSize(385)};
+  width: 100%;
 `
 
 export const Header = styled.div`
@@ -56,18 +59,24 @@ export const Social = styled.div`
 `
 
 export const Item = styled.div`
-  padding: ${responsiveSize(8)} ${responsiveSize(21)};
+  flex: 1;
+  padding: ${responsiveSize(8)};
   background-color: #FFFFFF;
   border-radius: ${responsiveSize(10)};
 
   display: flex;
   align-items: center;
+  justify-content: center;
 
-  :not(:last-child){margin-right:${responsiveSize(16)}}
+  cursor: pointer;
+
+  :not(:last-child){
+    margin-right:${responsiveSize(15)}
+  }
 `
 
 export const Sing = styled.span`
-  margin-left: ${responsiveSize(16)};
+  margin-left: ${responsiveSize(14)};
 
   font-size: ${responsiveSize(12)};
   line-height: ${responsiveSize(15)};

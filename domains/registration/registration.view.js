@@ -7,8 +7,6 @@ import * as S from './registration.styled'
 
 export default function RegistrationView() {
   return (
-    <Layouts title='Create an account' description='Create an account to use dashboard'>
-      <RegistrationForm/>
-    </Layouts>
+    <RegistrationForm/>
   )
 }

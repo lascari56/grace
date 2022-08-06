@@ -42,4 +42,6 @@ export const Eye = styled.div`
   right: 0px;
   bottom: ${responsiveSize(5)};
   right: ${responsiveSize(15)};
+
+  cursor: pointer;
 `
