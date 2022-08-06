@@ -60,17 +60,11 @@ export const Table = styled.div`
   }
 `
 
-<<<<<<< HEAD
 export const Pagination = styled(TablePagination)`
   margin-left: auto;
   margin-top: ${responsiveSize(34)};
 `
 
-=======
-// export const Row = styled.div`
-//   display: table-row;
-//   padding: 10px;
->>>>>>> efafea2e6adeafe33b08978516d43d06c79c3aaf
 
 //   box-sizing: border-box;
 
