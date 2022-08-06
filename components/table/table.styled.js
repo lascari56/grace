@@ -1,5 +1,7 @@
 import styled from "styled-components"
 
+import TablePagination from './components/pagination'
+
 import { responsiveSize } from "@utils/responsive";
 
 export const Container = styled.div`
@@ -8,6 +10,9 @@ export const Container = styled.div`
 
   background: #FFFFFF;
   border-radius: ${responsiveSize(20)};
+
+  display: flex;
+  flex-direction: column;
 `
 
 export const Table = styled.div`
@@ -55,9 +60,17 @@ export const Table = styled.div`
   }
 `
 
+<<<<<<< HEAD
+export const Pagination = styled(TablePagination)`
+  margin-left: auto;
+  margin-top: ${responsiveSize(34)};
+`
+
+=======
 // export const Row = styled.div`
 //   display: table-row;
 //   padding: 10px;
+>>>>>>> efafea2e6adeafe33b08978516d43d06c79c3aaf
 
 //   box-sizing: border-box;
 

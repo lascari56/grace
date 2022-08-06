@@ -14,7 +14,7 @@ export default function TableHeaderView() {
 
       <S.Content>
         <S.Search>
-          <S.Input placeholder='Search...'/>
+          <S.Input placeholder='Search in table...'/>
 
           <S.SearchIcon/>
         </S.Search>

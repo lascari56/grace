@@ -42,6 +42,12 @@ export default function CabinetMenuView({ activeRoute }) {
         ))}
       </S.Content>
 
+      <S.Footer>
+        <S.Title>Help</S.Title>
+
+        <S.Title>Contact Us</S.Title>
+      </S.Footer>
+
     </S.Container>
   )
 }
