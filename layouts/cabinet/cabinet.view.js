@@ -17,7 +17,6 @@ export default function CabinetView({children, title}) {
         </CabinetHeader>
 
         {children}
-
       </S.Content>
     </S.Container>
   )

@@ -2,14 +2,14 @@ import React from 'react'
 
 import * as S from './settings-profile-form.styled'
 
-export default function SettingsProfileFormView() {
+export default function SettingsProfileFormView({className}) {
   return (
-    <S.Container>
-      <S.Data>
+    <S.Container className={className}>
+      <S.Row>
         <S.Input theme='violet' title='First Name' size='small' placeholder='John'/>
 
         <S.Input theme='violet' title='Last Name' size='small' placeholder='Doe'/>
-      </S.Data>
+      </S.Row>
 
       <S.Input theme='violet' title='Date of Birth' placeholder='28 February 1996 (age 26)'/>
 

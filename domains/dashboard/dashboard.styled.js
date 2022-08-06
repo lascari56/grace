@@ -5,5 +5,3 @@ import { responsiveSize } from "@utils/responsive";
 export const Container = styled.div`
 
 `
-
-// ${responsiveSize(588)}

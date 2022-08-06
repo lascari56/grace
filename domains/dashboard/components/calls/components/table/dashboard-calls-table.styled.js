@@ -5,10 +5,7 @@ import DashboardCallsTableItem from './components/item'
 import { responsiveSize } from "@utils/responsive";
 
 export const Container = styled.div`
-  margin-top: ${responsiveSize(16)};
-
   max-height: ${responsiveSize(359)};
-
 `
 
 export const Item = styled(DashboardCallsTableItem)`
@@ -21,7 +18,4 @@ export const Item = styled(DashboardCallsTableItem)`
   }
 
   border-radius: 10px;
-  
 `
-
-// ${responsiveSize(588)}

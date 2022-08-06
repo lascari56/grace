@@ -1,9 +1,11 @@
 import styled from "styled-components"
 
+import SettingsProfileAvatar from './components/avatar'
+
 import { responsiveSize } from "@utils/responsive";
 
 export const Container = styled.div`
-  padding: ${responsiveSize(30)} ${responsiveSize(40)} ${responsiveSize(42)} ${responsiveSize(40)};
+  padding: ${responsiveSize(30)} ${responsiveSize(40)} ${responsiveSize(40)} ${responsiveSize(40)};
 
   background-color: #FFFFFF;
   border-radius: ${responsiveSize(20)};
@@ -20,4 +22,8 @@ export const Content = styled.div`
   margin-top: ${responsiveSize(30)};
 
   display: flex;
+`
+
+export const Avatar = styled(SettingsProfileAvatar)`
+  margin-right: ${responsiveSize(40)};
 `

@@ -39,8 +39,8 @@ export default function DashboardCallsTableView() {
   return (
     <S.Container>
       {items.map((item, index) => (
-          <S.Item key={index} data={item}/>
-        ))}
+        <S.Item key={index} data={item}/>
+      ))}
     </S.Container>
   )
 }

@@ -15,53 +15,80 @@ export const Container = styled.div`
   flex-direction: column;
 `
 
-export const Table = styled.table`
+export const Table = styled.div`
   width: 100%;
+  display: table;
 
-  border-collapse:collapse;
+  border-spacing: 0px ${responsiveSize(10)};
 
   td, th{
     :first-child{
       border-top-left-radius: ${responsiveSize(10)};
       border-bottom-left-radius: ${responsiveSize(10)};
+
+      padding-left: ${responsiveSize(20)};
     }
     :last-child{
       border-top-right-radius: ${responsiveSize(10)};
       border-bottom-right-radius: ${responsiveSize(10)};
     }
-    /* margin-bottom: ${responsiveSize(10)}; */
   }
 
-  td{
-    padding:${responsiveSize(15)} 0px ${responsiveSize(15)} ${responsiveSize(15)};
+  td {
+    font-size: ${responsiveSize(14)};
+    line-height: ${responsiveSize(42)};
   }
 
-  th{
+  th {
     text-align:left;
-    padding:${responsiveSize(15)} 0px ${responsiveSize(15)} ${responsiveSize(15)};
 
     background-color: #6424FB;
     font-weight: 700;
-    line-height: ${responsiveSize(17)};
+    font-size: ${responsiveSize(14)};
+    line-height: ${responsiveSize(40)};
 
     color: #FFFFFF;
   }
 
   tr{
-  :nth-child(2n){
-    background-color: rgba(100, 36, 251, 0.05);
-  }
-  :nth-child(2n-1){
-    background-color: rgba(100, 36, 251, 0.02);
-  }
+    :nth-child(2n){
+      background-color: rgba(100, 36, 251, 0.05);
     }
-
+    :nth-child(2n-1){
+      background-color: rgba(100, 36, 251, 0.02);
+    }
+  }
 `
 
+<<<<<<< HEAD
 export const Pagination = styled(TablePagination)`
   margin-left: auto;
   margin-top: ${responsiveSize(34)};
 `
 
+=======
+// export const Row = styled.div`
+//   display: table-row;
+//   padding: 10px;
+>>>>>>> efafea2e6adeafe33b08978516d43d06c79c3aaf
 
-// ${responsiveSize(30)}
+//   box-sizing: border-box;
+
+//   :nth-child(2n){
+//     background-color: rgba(100, 36, 251, 0.05);
+//   }
+//   :nth-child(2n-1){
+//     background-color: rgba(100, 36, 251, 0.02);
+//   }
+
+//   /* :not(:last-child) { */
+//     /* margin-bottom: ${responsiveSize(10)}; */
+//   /* } */
+// `
+
+// export const Cell = styled.div`
+//   display: table-cell;
+
+//   font-size: ${responsiveSize(14)};
+//   line-height: ${responsiveSize(42)};
+// `

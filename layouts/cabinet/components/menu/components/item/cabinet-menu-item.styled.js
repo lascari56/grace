@@ -34,6 +34,7 @@ export const Title = styled.span`
 
   font-size: ${responsiveSize(18)} ;
   line-height: ${responsiveSize(22)} ;
-
   color: #FFFFFF;
+
+  ${props => props.active && `font-weight: 700;`}
 `

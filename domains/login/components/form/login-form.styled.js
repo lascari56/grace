@@ -32,8 +32,7 @@ export const Input = styled.input`
 
   background-color: #F5F5F5;
   border-radius: ${responsiveSize(10)};
-
-  width: ${responsiveSize(325)};
+  width: 100%;
 `
 
 export const Forgot = styled.p` 

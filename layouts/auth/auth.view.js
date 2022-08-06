@@ -10,34 +10,34 @@ const AuthView = ({children, title, description}) => {
   return (
     <S.Container>
       <S.Preview>
-          <LogoSVG/>
+        <LogoSVG/>
       </S.Preview>
 
-      <S.Content>
-        <S.Header>
+      <S.Body>
+        <S.Content>
+          <S.Header>
             <S.Title>{title}</S.Title>
 
             <S.Description>{description}</S.Description>
-        
 
-          <S.Social>
-            <S.Item>
-              <GoogleSVG/>
+            <S.Social>
+              <S.Item>
+                <GoogleSVG/>
 
-              <S.Sing>Sign in with Google</S.Sing>
-            </S.Item>
+                <S.Sing>Sign in with Google</S.Sing>
+              </S.Item>
 
-            <S.Item>
-              <FacebookSVG/>
+              <S.Item>
+                <FacebookSVG/>
 
-              <S.Sing>Sign in with Facebook</S.Sing>
-            </S.Item>
-          </S.Social>
+                <S.Sing>Sign in with Facebook</S.Sing>
+              </S.Item>
+            </S.Social>
           </S.Header>
 
           {children}
-
-      </S.Content>
+        </S.Content>
+      </S.Body>
     </S.Container>
   );
 }
