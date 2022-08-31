@@ -4,12 +4,12 @@ import SettingsDelete from './components/delete'
 
 import * as S from './settings.styled'
 
-export default function SettingsView() {
+export default function SettingsView({user}) {
   return (
     <S.Container>
       <S.Row>
         <S.Column>
-          <S.Profile />
+          <S.Profile user={user} />
         </S.Column>
 
         <S.Column>

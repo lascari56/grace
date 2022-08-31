@@ -4,7 +4,7 @@ import EyeOpenSVG from './images/eye-open'
 
 import * as S from './input.styled'
 
-export default function InputView({title, placeholder, type, className, theme}) {
+export default function InputView({title, placeholder, type, isValid, className, theme, onChange}) {
 
   const [passwordShown, setPasswordShown] = useState(false);
 
@@ -18,7 +18,13 @@ export default function InputView({title, placeholder, type, className, theme}) 
       <S.Title>{title}</S.Title>
 
       <S.Content>
-        <S.Input type={passwordShown ? "text" : "password"} theme={theme} placeholder={placeholder}/>
+        <S.Input
+          type={passwordShown ? "text" : "password"}
+          theme={theme}
+          placeholder={placeholder}
+          isValid={isValid}
+          onChange={event => onChange && onChange(event.target.value)}
+        />
 
         {type === "password" && (
           <S.Eye onClick={togglePassword}>

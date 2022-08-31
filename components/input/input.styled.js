@@ -27,10 +27,13 @@ export const Input = styled.input`
 
   background-color: #F5F5F5;
   border-radius: ${responsiveSize(10)};
+  border: 1px solid #F5F5F5;
 
   ${props => props.theme === 'violet' && `
     background-color: rgba(100, 36, 251, 0.05);
   `}
+
+  ${props => props.isValid === false && 'border-color: #E03B4B;'}
 `
 
 export const Eye = styled.div`

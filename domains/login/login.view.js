@@ -4,9 +4,19 @@ import LoginForm from './components/form'
 
 import * as S from "./login.styled"
 
-const LoignView = () => {
+const LoignView = ({
+  formik,
+  loading,
+  validItems,
+  isValid
+}) => {
   return (
-    <LoginForm/>
+    <LoginForm
+      formik={formik}
+      loading={loading}
+      validItems={validItems}
+      isValid={isValid}
+    />
   );
 }
 

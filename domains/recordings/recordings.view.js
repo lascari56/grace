@@ -4,8 +4,12 @@ import { Table } from '@components'
 
 import * as S from './recordings.styled'
 
-export default function RecordingsView() {
+export default function RecordingsView({data}) {
+  console.log("data", data);
+
   return (
-    <Table/>
+    <Table
+      data={data}
+    />
   )
 }

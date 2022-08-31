@@ -12,12 +12,12 @@ export const Container = styled.div`
   border-radius: ${responsiveSize(10)};
   border: 1px solid #6424FB;
 
-  cursor: pointer;
+  /* cursor: pointer; */
   transition: transform 0.4s;
 
-  &:hover {
+  /* &:hover {
     transform: scale(0.95);
-  }
+  } */
 
   ${props => props.size === 'small' && `
     padding: ${responsiveSize(0)} ${responsiveSize(18)}; 
@@ -43,6 +43,16 @@ export const Container = styled.div`
   ${props => props.theme === 'outline-red' && `
     border-color: #AF0000;
     background: transparent;
+  `}
+
+  ${props => props.disabled && `opacity: 0.5;`}
+
+  ${props => !props.disabled && `
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(0.95);
+    }
   `}
 `
 

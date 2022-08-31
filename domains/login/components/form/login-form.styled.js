@@ -26,13 +26,17 @@ export const Title = styled.p`
 `
 
 export const Input = styled.input`
+  width: 100%;
+
   margin-top: ${responsiveSize(10)} ;
   margin-bottom: ${responsiveSize(20)} ;
   padding: ${responsiveSize(10)} ${responsiveSize(15)};
 
   background-color: #F5F5F5;
   border-radius: ${responsiveSize(10)};
-  width: 100%;
+  border: 1px solid #F5F5F5;
+
+  ${props => props.isValid === false && 'border: 1px solid red;'}
 `
 
 export const Forgot = styled.p` 

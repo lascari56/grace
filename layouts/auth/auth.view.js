@@ -20,7 +20,7 @@ const AuthView = ({children, title, description}) => {
 
             <S.Description>{description}</S.Description>
 
-            <S.Social>
+            {/* <S.Social>
               <S.Item>
                 <GoogleSVG/>
 
@@ -32,7 +32,7 @@ const AuthView = ({children, title, description}) => {
 
                 <S.Sing>Sign in with Facebook</S.Sing>
               </S.Item>
-            </S.Social>
+            </S.Social> */}
           </S.Header>
 
           {children}

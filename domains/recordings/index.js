@@ -1,1 +1,1 @@
-export {default} from './recordings.view'
+export {default} from './recordings.container'

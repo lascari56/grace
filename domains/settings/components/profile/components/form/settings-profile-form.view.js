@@ -2,7 +2,7 @@ import React from 'react'
 
 import * as S from './settings-profile-form.styled'
 
-export default function SettingsProfileFormView({className}) {
+export default function SettingsProfileFormView({className, user}) {
   return (
     <S.Container className={className}>
       <S.Row>
