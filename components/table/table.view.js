@@ -21,7 +21,7 @@ export default function TableView({data, handleOpenFile}) {
             <th>Phone #</th> */}
           </tr>
 
-          {!!data && !!data.length && data.map(item => (<tr>
+          {!!data && !!data.length && data.map(item => (<tr key={item._id}>
             <td>{item?._id}</td>
             
             <td>{item?.duration}</td>
