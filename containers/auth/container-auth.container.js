@@ -11,9 +11,14 @@ const ContainerAuthContainer = ({ children }) => {
 
   const user = useSelector(selectUser);
 
-  // const pathIsProtected = useMemo(() => {
-  //   return router.pathname?.indexOf("cabinet") !== - 1
-  // }, [router.pathname])
+  const pathIsProtected = useMemo(() => {
+    const notProtected = ['/'];
+
+    console.log("router.pathname", router.pathname);
+    // return router.pathname?.indexOf("cabinet") !== - 1
+
+    return notProtected.indexOf(router.pathname) === -1
+  }, [router.pathname])
 
   // const pathIsAdmin = useMemo(() => {
   //   return router.pathname?.indexOf("admin") !== - 1
@@ -27,15 +32,13 @@ const ContainerAuthContainer = ({ children }) => {
   //   return false
   // }, [])
 
-  // useEffect(() => {
-  //   if ((pathIsAdmin || pathIsProtected) && !user) {
-  //     router.push('/');
-  //   } else if (pathIsAdmin && user?.role !== "admin") {
-  //     router.push('/user-cabinet/carfax');
-  //   } else if (!pathIsAdmin && !pathIsProtected && user) {
-  //     router.push('/user-cabinet/carfax');
-  //   }
-  // }, [pathIsProtected, user])
+  useEffect(() => {
+    if ((pathIsProtected) && !user) {
+      router.push('/');
+    } else if (!pathIsProtected && user) {
+      router.push('/dashboard');
+    }
+  }, [pathIsProtected, user])
 
 
   // if (isNeedRedirect) {

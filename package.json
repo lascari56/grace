@@ -21,12 +21,15 @@
     "next": "12.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-loader-spinner": "^5.3.3",
     "react-redux": "^8.0.2",
+    "react-table": "^7.8.0",
     "react-toastify": "^9.0.8",
     "redux-deep-persist": "^1.0.6",
     "redux-persist": "^6.0.0",
     "sass": "^1.54.3",
     "styled-components": "^5.3.5",
+    "use-debounce": "^8.0.4",
     "yup": "^0.32.11"
   },
   "devDependencies": {

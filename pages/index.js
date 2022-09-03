@@ -1,19 +1,22 @@
 import React from "react";
 
-import Dashboard from "@domains/dashboard";
+import Login from "@domains/login";
 
-import CabinetLayouts from "../layouts/cabinet"
+import AuthLayouts from "../layouts/auth"
 
-function DashboardScreen(props) {
+function LoginScreen(props) {
   return (
-    <Dashboard  {...props} />
+    <Login {...props} />
   );
 }
 
-DashboardScreen.getLayout = function getLayout(page) {
+LoginScreen.getLayout = function getLayout(page) {
   return (
-    <CabinetLayouts title='Dashboard'>{page}</CabinetLayouts>
+    <AuthLayouts
+      title="Sign In"
+      description="Sign in to your account"
+    >{page}</AuthLayouts>
   )
 }
 
-export default DashboardScreen;
+export default LoginScreen;

@@ -1,1 +1,1 @@
-export {default} from './users.view'
+export {default} from './users.container'

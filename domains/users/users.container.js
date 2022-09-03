@@ -1,11 +1,11 @@
 import React, {useState, useMemo, useEffect} from 'react';
 
-import RecordingsView from "./recordings.view"
+import UsersView from "./users.view"
 
 import {useTable} from "@hooks/useTable"
 
-const RecordingsContainer = ({...props}) => {
-  const table = useTable({entry: "recordings", pageSize: 10})
+const UsersContainer = ({...props}) => {
+  const table = useTable({entry: "users", pageSize: 10})
 
   const data = useMemo(
     () => {
@@ -24,7 +24,7 @@ const RecordingsContainer = ({...props}) => {
   )
 
   return (
-    <RecordingsView
+    <UsersView
       {...props}
       data={data}
       table={table}
@@ -32,4 +32,4 @@ const RecordingsContainer = ({...props}) => {
   );
 }
 
-export default RecordingsContainer;
+export default UsersContainer;

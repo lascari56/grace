@@ -1,1 +1,1 @@
-export {default} from './table-header.view'
+export {default} from "./table-header.view"

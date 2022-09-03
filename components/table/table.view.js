@@ -1,46 +1,84 @@
-import React from 'react'
+import React from 'react';
 
-import TableHeader from './components/header'
+import TableSearch from "./components/search"
+import TableHeader from "./components/header"
 
-import { Button } from '@components';
+import { ThreeCircles } from 'react-loader-spinner'
 
-import * as S from './table.styled'
+import { useTable, useSortBy } from 'react-table'
 
-export default function TableView({data, handleOpenFile}) {
+import * as S from "./table.styled"
+
+const TableView = ({className, columns, data, page, total, pageCount, loading, search, disableSortBy = true, HeaderComponent, onSearch, onChangePage}) => {
+  const {
+    getTableProps,
+    getTableBodyProps,
+    headerGroups,
+    rows,
+    prepareRow,
+  } = useTable({ columns, data, disableSortBy  }, useSortBy)
+
   return (
-    <S.Container>
-      <TableHeader/>
-        <S.Table>
-          <tr>
-            <th>ID</th>
-            <th>Duration</th>
-            <th style={{textAlign: "center"}}>Actions</th>
-            {/* <th>Name</th>
-            <th>Email</th>
-            <th>ID</th>
-            <th>Phone #</th> */}
-          </tr>
+    
+    <S.Container className={className} loading={+loading} isFull={!data?.length}>
+      {/* {HeaderComponent} */}
+      <TableHeader />
+      
+      {(!!data?.length || !!search) && (
+        <>
+          <S.Body>
+            <S.Content>
+              <S.Table {...getTableProps()}>
+                <thead>
+                  {headerGroups?.map((headerGroup, indexGroup) => (
+                    <tr key={indexGroup} {...headerGroup.getHeaderGroupProps()}>
+                      {headerGroup?.headers?.map((column, indexColumn) => (
+                        <th key={indexColumn} {...column.getHeaderProps(column.getSortByToggleProps())}>
+                          {column.render('Header')}
 
-          {!!data && !!data.length && data.map(item => (<tr key={item._id}>
-            <td>{item?._id}</td>
+                          {column.isSorted
+                            ? column.isSortedDesc
+                              ? ' 🔽'
+                              : ' 🔼'
+                            : ''}
+                        </th>
+                      ))}
+                    </tr>
+                  ))}
+                </thead>
+                <tbody {...getTableBodyProps()}>
+                  {rows?.map((row, indexRow) => {
+                    prepareRow(row)
+                    return (
+                      <tr key={indexRow} {...row.getRowProps()}>
+                        {row?.cells?.map((cell, indexCell) => {
+                          return (
+                            <td key={indexCell} {...cell.getCellProps()}>
+                              {cell.render('Cell')}
+                            </td>
+                          )
+                        })}
+                      </tr>
+                    )
+                  })}
+                </tbody>
+              </S.Table>
+            </S.Content>
             
-            <td>{item?.duration}</td>
+            {!!onSearch && <TableSearch onSearch={onSearch} />}
+          </S.Body>
 
-            <td style={{display: "flex", justifyContent: "center"}}>
-              <Button
-                // style={{width: 50}}
-                title="Open file"
-                size="small"
-                onClick={() => handleOpenFile(item.file)}
-              />
-            </td>
-            {/* <td>Michelle Dan</td>
-            <td>michelle@dan.co</td>
-            <td>912 678 841 345</td> */}
-          </tr>))}
-        </S.Table>
+          {pageCount > 1 && <S.Pagination value={page} total={total} pageCount={pageCount} onChange={onChangePage} />}
+        </>
+      )}
 
-        <S.Pagination/>
+      {loading && ( 
+        <S.Loader>
+          <ThreeCircles color="#1D0F40" width={40} height={40} />
+        </S.Loader>
+      )}
     </S.Container>
-  )
+  );
 }
+
+export default TableView;

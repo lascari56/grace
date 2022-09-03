@@ -1,15 +1,43 @@
-import React from 'react'
+import React, {useMemo} from 'react'
 
-import { Table } from '@components'
+import { Table, Button } from '@components'
 
-import * as S from './recordings.styled'
+import RecordingsActions from './components/actions'
 
-export default function RecordingsView({data}) {
+export default function RecordingsView({data, table}) {
   console.log("data", data);
 
+  const columns = useMemo(
+    () => [
+      {
+        Header: 'ID',
+        accessor: '_id',
+      },
+      {
+        Header: 'Duration',
+        accessor: 'duration',
+      },
+      {
+        Header: 'Actions',
+        accessor: 'actions',
+        Cell: ({row}) => (
+          <RecordingsActions data={row.original} />
+        ),
+      },
+    ],
+    []
+  )
+
   return (
-    <Table
+    <Table 
       data={data}
+      columns={columns}
+      page={table?.page}
+      total={table?.response?.total}
+      pageCount={table?.pageCount}
+      loading={table?.loading}
+      // HeaderComponent={<TableHeader title="Logs payments" RightComponent={!!statistics?.data && <LogsStatistic statistics={statistics} />} />}
+      onChangePage={table?.onChangePage}
     />
   )
 }

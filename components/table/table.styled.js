@@ -1,25 +1,60 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
-import TablePagination from './components/pagination'
+import PaginationCustom from "@components/pagination"
+import TableHeader from './components/header'
 
 import { responsiveSize } from "@utils/responsive";
 
 export const Container = styled.div`
-  margin-top: ${responsiveSize(19)};
   padding: ${responsiveSize(40)} ${responsiveSize(50)};
 
-  background: #FFFFFF;
-  border-radius: ${responsiveSize(20)};
-
+  position: relative;
   display: flex;
   flex-direction: column;
+
+  width: 100%;
+  border-radius: ${responsiveSize(20)};
+  
+  overflow: hidden;
+
+  background-color: #fff;
+
+  ${props => props.loading && `
+    min-height: 80px;
+  `}
+
+  ${props => props.isFull && `
+    flex-grow: 1;
+  `}
 `
 
-export const Table = styled.div`
-  width: 100%;
-  display: table;
+export const Body = styled.div`
+  /* width: 100%;
+  border-radius: ${responsiveSize(20)};
+  
+  overflow: hidden;
 
-  border-spacing: 0px ${responsiveSize(10)};
+  background-color: #fff; */
+`
+
+export const Content = styled.div`
+  width: 100%;
+
+  /* padding: ${responsiveSize(40)} ${responsiveSize(50)}; */
+
+  overflow-x: auto;
+`
+
+export const Pagination = styled(PaginationCustom)`
+  margin-top: ${responsiveSize(36)};
+`
+
+export const Table = styled.table`
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  /* padding: ${responsiveSize(40)} ${responsiveSize(50)}; */
 
   td, th{
     :first-child{
@@ -50,39 +85,75 @@ export const Table = styled.div`
     color: #FFFFFF;
   }
 
-  tr{
+  tr {
+    margin-bottom: 10px;
+    
     :nth-child(2n){
       background-color: rgba(100, 36, 251, 0.05);
     }
+
     :nth-child(2n-1){
       background-color: rgba(100, 36, 251, 0.02);
     }
   }
 `
 
-export const Pagination = styled(TablePagination)`
-  margin-left: auto;
-  margin-top: ${responsiveSize(34)};
+export const Hh = styled.th`
+  /* padding: ${responsiveSize(15)} 0px; */
+
+  font-weight: 300;
+  font-size: ${responsiveSize(14)};
+  line-height: 150%;
+  white-space: pre-line;
 `
 
+export const Td = styled.td`
+  /* padding: ${responsiveSize(10)} 0px; */
+  font-weight: 300;
+  font-size: ${responsiveSize(14)};
+  line-height: 150%;
+  min-width: auto !important;
 
-//   box-sizing: border-box;
+  white-space: pre-line;
+`
 
-//   :nth-child(2n){
-//     background-color: rgba(100, 36, 251, 0.05);
-//   }
-//   :nth-child(2n-1){
-//     background-color: rgba(100, 36, 251, 0.02);
-//   }
+export const Tr = styled.tr`
+  margin-bottom: ${responsiveSize(10)};
+  padding: ${responsiveSize(20)} ${responsiveSize(12)};
 
-//   /* :not(:last-child) { */
-//     /* margin-bottom: ${responsiveSize(10)}; */
-//   /* } */
-// `
+  background: rgba(100, 36, 251, 0.02);
+  border-radius: 10px;
 
-// export const Cell = styled.div`
-//   display: table-cell;
+  /* padding: ${responsiveSize(10)} 0px;
+  font-weight: 300;
+  font-size: ${responsiveSize(14)};
+  line-height: 150%;
+  min-width: auto !important;
 
-//   font-size: ${responsiveSize(14)};
-//   line-height: ${responsiveSize(42)};
-// `
+  white-space: pre-line; */
+`
+
+export const Label = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+export const Item = styled.div`
+  min-height: ${responsiveSize(40)};
+`
+
+export const Loader = styled.div`
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(255, 255, 255, 0.5);
+  /* flex: 1;
+   */
+`
