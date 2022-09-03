@@ -2,6 +2,8 @@ import React, {useMemo} from 'react'
 
 import { Table } from '@components'
 
+import moment from "moment"
+
 import * as S from './users.styled'
 
 export default function UsersView({data, table}) {
@@ -16,7 +18,7 @@ export default function UsersView({data, table}) {
       //   accessor: 'name',
       // },
       {
-        Header: 'Actions',
+        Header: 'Name',
         accessor: 'name',
         Cell: ({row}) => <p>{row.original.name} {row.original.surname}</p>
       },
@@ -27,7 +29,12 @@ export default function UsersView({data, table}) {
       {
         Header: 'Phone',
         accessor: 'phone',
-      }
+      },
+      {
+        Header: 'Date',
+        accessor: 'createdAt',
+        Cell: ({value}) => <p>{moment(value).format("YYYY-MM-DD HH:SS")}</p>,
+      },
     ],
     []
   )

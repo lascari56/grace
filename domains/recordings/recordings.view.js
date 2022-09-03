@@ -1,4 +1,5 @@
 import React, {useMemo} from 'react'
+import moment from "moment"
 
 import { Table, Button } from '@components'
 
@@ -16,6 +17,11 @@ export default function RecordingsView({data, table}) {
       {
         Header: 'Duration',
         accessor: 'duration',
+      },
+      {
+        Header: 'Date',
+        accessor: 'createdAt',
+        Cell: ({value}) => <p>{moment(value).format("YYYY-MM-DD HH:SS")}</p>,
       },
       {
         Header: 'Actions',
