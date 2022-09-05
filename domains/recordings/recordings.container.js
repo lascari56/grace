@@ -5,7 +5,7 @@ import RecordingsView from "./recordings.view"
 import {useTable} from "@hooks/useTable"
 
 const RecordingsContainer = ({...props}) => {
-  const table = useTable({entry: "recordings", pageSize: 10})
+  const table = useTable({entry: "recordings", pageSize: 10, query: {user: "all"}})
 
   const data = useMemo(
     () => {
